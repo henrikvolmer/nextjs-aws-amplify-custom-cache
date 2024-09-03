@@ -7,6 +7,7 @@ const nextConfig = {
   cacheHandler: fileURLToPath(
     import.meta.resolve("@henrikvolmer/nextjs-cache-handler-s3"),
   ),
+  cacheMaxMemorySize: 0,
 };
 
 export default nextConfig;
