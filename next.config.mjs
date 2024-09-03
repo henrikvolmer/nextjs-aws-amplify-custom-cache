@@ -8,6 +8,15 @@ const nextConfig = {
     import.meta.resolve("@henrikvolmer/nextjs-cache-handler-s3"),
   ),
   cacheMaxMemorySize: 0,
+  async redirects() {
+    return [
+      {
+        source: "/foo",
+        destination: "/",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
